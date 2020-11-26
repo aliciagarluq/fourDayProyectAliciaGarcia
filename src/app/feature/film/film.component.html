@@ -1,0 +1,18 @@
+<h2 class="mt-3 ml-3">Resultados de la búsqueda:</h2>
+
+<div class="container-fluid justify-content-center">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{info.Title}}</mat-card-title>
+      <mat-card-subtitle> {{info.Year}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="info.Poster" alt="Photo not found">
+    <mat-card-content>
+      <p>
+        {{info.imdbID}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<br>

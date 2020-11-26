@@ -1,0 +1,33 @@
+<h1 class="tittle">Resultados</h1>
+
+<!-- <div *ngIf="!loading">
+    <div *ngFor="let movie of info.Search">
+        <img *ngIf="movie.Poster != 'N/A'" [src]="movie.Poster">
+        <img *ngIf="!movie.Poster" src='https://blog.davidrojo.es/wp-content/uploads/2011/04/file-not-found.jpg'>
+        <h1>Nombre:{{movie.Title}}</h1>
+        <h1>Year:{{movie.Year}}</h1>
+        <h2>Id:{{movie.imdbID}}</h2>
+ 
+        <button type="button" class="btn btn-primary btn-sm ml-2" [routerLink]="['/film',movie.imdbID]">Buscar</button>
+    </div>
+</div> -->
+<div class="mat-app-background basic-container">
+    <div *ngIf="!loading" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
+        <mat-card *ngFor="let movie of info.Search" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{movie.Title}}</mat-card-title>
+            <mat-card-subtitle> {{movie.Year}}</mat-card-subtitle>
+          </mat-card-header>
+              <img mat-card-image [src]="movie.Poster" alt="Photo not found">
+            
+          <mat-card-content>
+            <p>
+                {{movie.imdbID}}
+            </p>
+          </mat-card-content>
+          <button mat-raised-button type="button"  color="primary" [routerLink]="['/film',movie.imdbID]">Más info.</button>
+        </mat-card>
+      </div>
+</div>
+

@@ -1,0 +1,23 @@
+<!-- <div class="container-fluid">
+        <span><strong>PeliculasMolonas.com</strong></span>
+        <form class="d-flex justify-content-end">
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input name="movieText" type="text" pInputText [(ngModel)]="movieText"/>
+            </span>
+            <button type="button" class="btn btn-primary btn-sm ml-2" [routerLink]="['search',movieText]">Buscar</button>
+            </form>
+    </div> -->
+
+
+
+<mat-toolbar>
+  <span routerLink='/'><strong>PeliculasMolonas.com</strong></span>
+  <form>
+
+    <input name="movieText" type="text" pInputText [(ngModel)]="movieText" />
+    <button mat-raised-button type="button" color="primary" [routerLink]="['search',movieText]">Buscar</button>
+
+
+  </form>
+</mat-toolbar>

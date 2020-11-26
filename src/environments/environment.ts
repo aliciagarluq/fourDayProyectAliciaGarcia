@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey:'&apiKey=bf897f59',
+  url:'http://www.omdbapi.com/?s=',
+  url2:'http://www.omdbapi.com/?i=',
+  homeUrl:'http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=8'
 };
 
 /*
